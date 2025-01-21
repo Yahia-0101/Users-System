@@ -25,6 +25,11 @@ app.post("/showdata",(req,res) => {
         data:getAll()
     })
 })
+
+app.get('*',(req,res) => {
+    res.redirect('/')
+})
+
 app.listen(3001,() => {
     console.log("Hello New Project")
 })
